@@ -11,10 +11,11 @@ export const parseRemessaCnab = (
   files: any,
   cnabtype = 400,
   bankcode = '237',
-  retorno: { split: (arg0: string) => void }
+  retorno: { split: (arg0: string) => void; toString: () => void }
 ) => {
   try {
     const yamls: any = []
+    retorno.toString()
     const retornoLines: any = retorno.split('\n')
     let index = 0
     for (const key in files) {
