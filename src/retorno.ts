@@ -15,7 +15,7 @@ export const parseRemessaCnab = (
 ) => {
   try {
     const yamls: any = []
-    retorno.toString()
+    String(retorno)
     const retornoLines: any = retorno.split('\n')
     let index = 0
     for (const key in files) {
