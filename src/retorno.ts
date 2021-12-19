@@ -7,15 +7,9 @@ import { CNAB_YAML_DIR } from './const'
  * @param {*} cnabtype
  * @param {*} bankcode
  */
-export const parseRemessaCnab = (
-  files: any,
-  cnabtype = 400,
-  bankcode = '237',
-  retorno: { split: (arg0: string) => void }
-) => {
+export const parseRemessaCnab = (files: any, cnabtype = 400, bankcode = '237', retorno: string) => {
   try {
     const yamls: any = []
-    String(retorno)
     const retornoLines: any = retorno.split('\n')
     let index = 0
     for (const key in files) {
